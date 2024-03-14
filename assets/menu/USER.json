@@ -1,0 +1,99 @@
+[
+  {
+    "mtype": [
+      {
+        "column": null,
+        "sidemenu": "left",
+        "menutype": "sidemenu",
+        "tabstypes": null,
+        "tabposition": null
+      }
+    ],
+    "menu": [
+      {
+        "do": "8",
+        "tit": "Farmer Analysis",
+        "pid": null,
+        "mt": "Report",
+        "view": "farmeranalysis-rpt",
+        "children": [],
+        "cls": "albums"
+      },
+      {
+        "do": "7",
+        "tit": "Spray Update",
+        "pid": null,
+        "mt": "Report",
+        "view": "sprayupdate-rpt",
+        "children": [],
+        "cls": "albums"
+      },
+      {
+        "do": "6",
+        "tit": "Status Update Pending",
+        "pid": null,
+        "mt": "Report",
+        "view": "statuspendingupdate-rpt",
+        "children": [],
+        "cls": "albums"
+      },
+      {
+        "do": "5",
+        "tit": "Geo Area Pending",
+        "pid": null,
+        "mt": "Report",
+        "view": "geoandareapending-rpt",
+        "children": [],
+        "cls": "albums"
+      },
+      {
+        "do": "4",
+        "tit": "Sowing Entry",
+        "pid": null,
+        "mt": "Transaction",
+        "view": "branch",
+        "children": [],
+        "cls": "add-circle"
+      },
+      {
+        "do": "3",
+        "tit": "Agreement Pending",
+        "pid": null,
+        "mt": "Report",
+        "view": "sync",
+        "children": [],
+        "cls": "aperture"
+      },
+      {
+        "do": "2",
+        "tit": "FAQ",
+        "pid": null,
+        "mt": "Report",
+        "view": "branch",
+        "children": [],
+        "cls": "albums"
+      },
+      {
+        "do": "1",
+        "tit": "Farmer List",
+        "pid": null,
+        "mt": "Report",
+        "view": "company",
+        "children": [],
+        "cls": "document"
+      }
+      
+    ],
+    "rn": "user",
+    "sub": [
+      {
+        "do": "1",
+        "cap": "Weather",
+        "exp": null,
+        "act": "menu",
+        "cls": "cloud",
+        "view": "weatherreport-rpt"
+      }
+    ]
+  }
+]
