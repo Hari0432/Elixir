@@ -1,0 +1,121 @@
+$primary-font-color: #6C63FF;
+$secondary-font-color: #6E6E6E;
+
+ion-content {
+
+    --padding-start: 30px;
+    --padding-top: 20px;
+    --padding-end: 30px;
+    --padding-bottom: 20px;
+
+    .title-text {
+
+        h2 {
+
+            font-size: 23px;
+            font-family: 'Poppins';
+            font-weight: 700;
+            color: $primary-font-color;
+
+        }
+
+        ion-label {
+
+            font-size: 12px;
+            color: $secondary-font-color;
+            font-family: 'Poppins';
+            font-weight: 500;
+        }
+    }
+
+    .landing-bgImage {
+
+        padding-top: 20px;
+        margin: auto;
+
+    }
+
+    .login-with {
+
+        margin-top: 30px;
+
+        h3 {
+
+            text-align: center;
+            font-family: 'Poppins';
+            font-size: 16px;
+            color: $primary-font-color;
+            font-weight: 600;
+
+        }
+
+        .login-btns {
+
+            display: grid;
+            justify-content: center;
+
+            .username-pass {
+
+                width: 256px;
+                --background: #FF6584;
+                font-size: 12px;
+                font-weight: 500;
+                padding-bottom: 15px;
+                text-transform: capitalize;
+                --border-radius: 6px;
+                --box-shadow: none;
+                
+            }
+
+            .phone {
+    
+                --background: #2F2E41;
+                font-size: 12px;
+                font-weight: 500;
+                text-transform: capitalize;
+                --border-radius: 6px;
+                --box-shadow: none;
+    
+            }
+        }
+
+        .divider-container {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .divider {
+
+                width: 23%;
+                border-bottom: 1px solid #D3D3D3;
+
+            }
+
+            p {
+
+                color: #D3D3D3;
+                padding: 0 20px;
+
+            }
+        }
+
+    }
+
+    .footer-container {
+
+        font-size: 14px;
+        font-family: 'Poppins';
+        
+        p {
+            
+            margin: 0;
+            color: $secondary-font-color;
+
+            span {
+
+                color: $primary-font-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,186 @@
+ion-content {
+
+    .select-company {
+
+        margin-top: 30px;
+
+        .title {
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 600;
+            padding: 20px;
+    
+        }
+
+        .search-container {
+
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            border: 1.5px solid #6C63FF;
+            border-radius: 10px;
+
+            ion-icon {
+
+                font-size: 25px;
+                padding: 10px;
+                color: #787878;
+
+            }
+
+            ion-input {
+
+                --highlight-color-focused: none;
+
+
+            }
+
+            
+        }
+
+        .company-list {
+
+            margin: 0 20px 30px;
+
+            .companies-list-container{
+
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                margin-top: 10px;
+                padding-bottom: 50px;
+        
+                ion-card {
+        
+                    display: flex;
+                    flex-flow: column;
+                    gap: 10px;
+                    background: #f0efff;
+                    color: black;
+                    border-radius: 10px;
+                    padding: 20px;
+                    box-shadow: none;
+                    height: 190px;
+                    margin: 0;
+
+                    .avatar {
+                        
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        background: #ffffff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        ion-icon {
+
+                            width: 20px;
+                            height: 20px;
+
+                        }
+                    }
+        
+                    .card-title {
+        
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 1.5em;
+                        font-weight: 500;
+        
+                    }
+        
+                    .description {
+        
+                        font-size: 16px;
+                        margin: 0;
+        
+                    }
+        
+                    .select {
+        
+                        display: flex;
+                        gap: 10px;
+                        width: fit-content;
+                        color: black;
+                        background: transparent;
+                        padding: 10px 15px;
+                        border: 1px solid black;
+                        border-radius: 22px;
+                        position: absolute;
+                        bottom: 20px;
+                        font-family: 'Poppins';
+        
+                    }
+        
+                }
+        
+                ion-card.selected {
+        
+                    border: 2px solid #b0acff;
+                    padding: 18px;
+        
+                    .select {
+        
+                        border: 1.5px solid #b0acff;
+        
+                    }
+        
+                }
+        
+            }
+
+            .companies-radiobox-container{
+
+                display: flex;
+                justify-content: center;
+
+                ion-radio-group {
+
+                    ion-item {
+
+                        display: flex;
+                        flex-wrap: wrap;
+                        --ripple-color: transparent;
+                        --background: #f0efff;
+                        border-radius: 10px;
+                        margin-bottom: 10px;
+                        width: fit-content !important;
+
+                        ion-radio {
+                            margin-right: 10px;
+                            
+                        }
+
+                    }
+
+                    
+                }
+
+                .selected {
+        
+                    border: 1.5px solid #b0acff;
+                    border-radius: 10px;
+
+                }
+        
+            }
+        }
+    
+        .continue {
+
+            position: fixed;
+            bottom: 20px;
+            width: -webkit-fill-available;
+            left: 0;
+            margin: 0 20px;
+            font-family: 'Poppins';
+            --background: #6C63FF;
+            --padding-top: 18px;
+            --padding-bottom: 18px;
+            --border-radius: 8px;
+            --box-shadow: none;
+    
+        }
+    }
+}

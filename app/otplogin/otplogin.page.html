@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="title-text">
+    <h2>Welcome</h2>
+    <ion-label>Please login with phone</ion-label>
+  </div>
+
+  <div class="body-container">
+    <div class="landing-bgImage">
+      <img src="assets/Images/otp_authentication.svg" alt="landing_background_image">
+    </div>
+  
+    <div class="input-container">
+      <form>
+        <div class="input-field">
+          <ion-label for="phone">Phone no.</ion-label>
+          <div class="phone-input" [formGroup]="loginWithPhoneForm">
+            <ion-select class="never-flip" toggleIcon="chevron-down-sharp" interface="popover" justify="end" value="+91" formControlName="countrycode">
+              <ion-select-option value="+91">+91</ion-select-option>
+              <ion-select-option value="+11">+11</ion-select-option>
+              <ion-select-option value="+21">+21</ion-select-option>
+            </ion-select>
+            <ion-input id="login_username_id" type="tel" formControlName="username"></ion-input>
+          </div>
+        </div>
+        
+        <div class="resend">
+          <ion-label>Resend OTP</ion-label>
+        </div>
+  
+        <div class="login-btn-container">
+          <ion-button class="signup-btn" expand="block" data-type="otp" data-params="USERNAME" (click)="login($event)" type="submit">Send OTP</ion-button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</ion-content>
+

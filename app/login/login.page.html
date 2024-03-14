@@ -1,0 +1,44 @@
+<ion-content>
+  <div class="title-text">
+    <h2>Login</h2>
+    <ion-label>Please login to continue</ion-label>
+  </div>
+
+  <div class="landing-bgImage">
+    <img src="assets/Images/Loginpage_Vector_image.png" alt="landing_background_image">
+  </div>
+
+  <div class="input-container">
+    <form class="form-container" [formGroup]="loginWithEmailForm" >
+      <div class="input-field">
+        <ion-label for="">Username</ion-label>
+        <ion-input id="login_username_id" type="email" formControlName="username"></ion-input>
+      </div>
+  
+      <div class="input-field">
+        <ion-label for="password">Password</ion-label>
+        <ion-input id="login_password_id" type="password" formControlName="password"  type="{{ showLoginPassword ? 'text' : 'password' }}">
+          <ion-icon name="{{ showLoginPassword ? 'eye-off-outline' : 'eye-outline' }}" slot="end" (click)="toggleLoginPasswordVisibility()"></ion-icon>
+        </ion-input>
+      </div>
+
+      <div class="checkbox-forgotpassword">
+
+        <ion-checkbox labelPlacement="end" formControlName="rememberme">Remember me</ion-checkbox>
+        <ng-container *ngIf="forgetpassword">
+          <ion-label (click)="forgotPassword()">forgot password ?</ion-label>
+        </ng-container>
+      </div>
+     
+  
+      <div class="login-btn-container">
+        <ion-button (click)="login($event)" class="signup-btn" expand="block" type="submit" data-type="form" data-params="USERNAME,PASSWORD" data-sql='SELECT userid AS "muserid", username AS "first_name",lastname AS "lastname", mobilenumber AS "mobile_number",mobilenumber, emailid AS "email_id", enabled  AS "is_active", rolename AS "role", enable_mobile AS "enable_mobile" ,projectid AS "projectid"  FROM euser WHERE mobilenumber = :USERNAME AND password = :PASSWORD'>Login</ion-button>
+      </div>
+    </form>
+  </div>
+
+  <div class="footer-container">
+    <p>Do you want to login with <span (click)="loginWithPhone()">Phone</span></p>
+  </div>
+
+</ion-content>

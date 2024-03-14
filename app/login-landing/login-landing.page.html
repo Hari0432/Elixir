@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="title-text">
+    <h2>Welcome</h2>
+    <ion-label>Please login or signup to continue</ion-label>
+  </div>
+
+  <div class="landing-bgImage">
+    <img src="assets/Images/mobile_login.svg" alt="landing_background_image">
+  </div>
+
+  <div class="login-with">
+    <h3>Login with</h3>
+    <div class="login-btns">
+      <ion-button class="username-pass" expand="block" (click)="loginWithEmail()">Username & Password</ion-button>
+      <ion-button class="phone" expand="block" (click)="loginWithPhone()">Phone Number</ion-button>
+    </div>
+    <!-- 
+    <div class="divider-container">
+      <div class="divider"></div>
+      <p>Or</p>
+      <div class="divider"></div>
+    </div> -->
+  </div>
+
+
+  <!-- <div class="footer-container">
+    <p>Do you want direct <span (click)="loginWithEmail()">Login</span></p>
+  </div> -->
+
+
+</ion-content>

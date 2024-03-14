@@ -1,0 +1,30 @@
+<ion-content>
+  <section class="select-company">
+    <span class="title">Select a company</span>
+    <div class="search-container">
+      <ion-icon name="search-outline"></ion-icon>
+      <ion-input (ionInput)="updateSearchPrompt($event)" placeholder="Search"></ion-input>
+    </div>    
+    <div class="company-list">
+      <div class="companies-list-container">
+        <ion-card *ngFor="let company of searchPrompt.length > 0 ? searchFilteredCompanies :
+          optionJson; let i = index;" [ngClass]="{'selected' : i === selectedCompanyIndex}" (click)="toggleSelectCompany(i)">
+          <div class="avatar"><ion-icon name="business-outline"></ion-icon></div>
+          <span class="card-title">{{ company.COMPANYNAME }}</span>
+        </ion-card>
+      </div>
+      <!-- <div class="companies-radiobox-container">
+        <ion-radio-group [(ngModel)]="selectedCompanyIndex">
+          <ion-item lines="none" *ngFor="let company of optionJson; let i = index;" [class.selected]="i === selectedCompanyIndex">
+            <ion-radio slot="start" [value]="i"></ion-radio>
+            <ion-label>{{ company.COMPANYNAME }}</ion-label>
+          </ion-item>
+        </ion-radio-group>
+      </div> -->
+    </div>
+    <ion-button class="continue" (click)="submitSelection()">
+      Submit
+    </ion-button>
+
+  </section>
+</ion-content>

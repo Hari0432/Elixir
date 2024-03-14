@@ -1,0 +1,23 @@
+<ion-content>
+  <div class="title-text">
+    <h2>Welcome</h2>
+    <ion-label>Please drop your OTP</ion-label>
+  </div>
+
+  <div class="landing-bgImage">
+    <img src="assets/Images/mobile-otp.png" alt="landing_background_image">
+  </div>
+
+  <div class="input-container">
+    <ion-label>Enter your OTP</ion-label>
+    
+    <section>
+      <div class="otp-field">
+        <ng-otp-input (onInputChange)="otpValue($event)" class="custom-ng-otp-input" [config]='otpInputConfig'></ng-otp-input>
+      </div>
+      <ion-label class="resend" (click)="processResendOtp()">Resend OTP</ion-label>
+      <ion-button type="submit" expand="block" (click)="otpLogin()">Submit OTP</ion-button>
+    </section>
+    
+  </div>
+</ion-content>
